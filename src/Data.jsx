@@ -67,7 +67,7 @@ const data = [
         description: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime, earum optio corrupti neque deserunt temporibus voluptatem.",
         image: "https://i.pinimg.com/736x/6d/62/9a/6d629ac6ce875ede796b40dea2e1e309.jpg",
         stack: "Html, Tailwindcss, React, Js",
-        codeLink: 'https://github.com/krishmungase/Krish-s-Blogs.git'
+        codeLink: 'https://github.com/krishmungase/PortFolio-Krish_Mungase'
     },
 
 ];

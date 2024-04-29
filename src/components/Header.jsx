@@ -38,7 +38,7 @@ const Header = () => {
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
       </div>
 
-      <div className='hidden md:block flex items-center justify-center mx-5 cursor-pointer'>
+      {/* <div className='hidden md:block flex items-center justify-center mx-5 cursor-pointer'>
         <button onClick={toggleHandler}
           className=''
         >
@@ -46,7 +46,7 @@ const Header = () => {
             clicked ? (<CiLight className='size-6 transition rounded-full duration-300 ease-in-out transform p-[2px] hover:scale-110 hover:shadow-md' />) : (<CiDark className='size-6 transition duration-300 rounded-full p-[2px] ease-in-out transform hover:scale-110 hover:shadow-md' />)
           }
         </button>
-      </div>
+      </div> */}
 
     </div >
   )

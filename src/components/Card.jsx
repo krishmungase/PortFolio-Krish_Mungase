@@ -16,7 +16,7 @@ const Card = ({ data }) => {
 
     }
     return (
-        <div className=" flex flex-col text-gray-700 bg-[#FFF] shadow-md bg-clip-border rounded-xl w-72 h-[450px] transition duration-300 ease-in-out transform hover:scale-110">
+        <div className=" flex flex-col text-gray-700 bg-[#FFF] shadow-md bg-clip-border rounded-xl w-72 h-[450px] ``transition duration-300 ease-in-out transform hover:scale-110">
             <div className=" mx-4 mt-4 overflow-hidden text-gray-700 bg-white bg-clip-border rounded-xl h-96">
                 <img
                     src={data.image}

@@ -1,17 +1,19 @@
 import { React, useState } from 'react'
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 import { CiMenuFries } from "react-icons/ci";
 import Sidebar from './Sidebar';
-import { CiDark } from "react-icons/ci";
-import { CiLight } from "react-icons/ci";
-
+import { MdDarkMode, MdLightMode } from "react-icons/md";
 const Header = () => {
   const [isOpen, setIsOpen] = useState(true);
-  const [clicked, setClicked] = useState(false)
+  const [clicked, setClicked] = useState(false);
+  const [darkMode, setDarkMode] = useState(false);
 
-  const toggleHandler = () => {
-    setClicked(prev => !prev)
-  }
+  const toggleMode = () => {
+    setDarkMode((prev) => !prev);
+    document.body.classList.remove(darkMode ? "light" : "dark");
+    document.body.classList.add(darkMode ? "dark" : "light");
+    setClicked((prev) => !prev)
+  };
 
   const toggleSidebar = () => {
     setIsOpen(!isOpen);
@@ -24,30 +26,28 @@ const Header = () => {
 
 
       <div className='hidden md:flex items-center justify-center space-x-5'>
-        <ul className='flex items-center justify-center space-x-8 text-[#666666]'>
-          <NavLink to='/' className={`cursor-pointer underlines`}>Home</NavLink>
-          <NavLink to='about' className='cursor-pointer underlines'>About</NavLink>
-          <NavLink to='techstack' className='cursor-pointer underlines'>TechStack</NavLink>
-          <NavLink to='project' className='cursor-pointer underlines'>Project</NavLink>
-          <NavLink to='contact' className='cursor-pointer underlines'>Contact</NavLink>
+        <ul className='flex items-center justify-center space-x-8'>
+          <NavLink to='/' className={`cursor-pointer underlines text-[#666666] dark:text-[#999999]`}>Home</NavLink>
+          <NavLink to='about' className='cursor-pointer underlines text-[#666666] dark:text-[#999999]'>About</NavLink>
+          <NavLink to='techstack' className='cursor-pointer underlines text-[#666666] dark:text-[#999999]'>TechStack</NavLink>
+          <NavLink to='project' className='cursor-pointer underlines text-[#666666] dark:text-[#999999]'>Project</NavLink>
+          <NavLink to='contact' className='cursor-pointer underlines text-[#666666] dark:text-[#999999]'>Contact</NavLink>
         </ul>
+      </div>
+      <div className='flex items-center justify-center'>
+        <button className='ml-8'
+          onClick={toggleMode}
+        >
+          {
+            clicked ? (<MdDarkMode className='dark:text-black size-6' />) : (<MdLightMode className='text-white size-6' />)
+          }
+        </button>
       </div>
 
       <div className='md:hidden'>
         <CiMenuFries className='size-6 cursor-pointer' onClick={toggleSidebar} />
         <Sidebar isOpen={isOpen} toggle={toggleSidebar} />
       </div>
-
-      {/* <div className='hidden md:block flex items-center justify-center mx-5 cursor-pointer'>
-        <button onClick={toggleHandler}
-          className=''
-        >
-          {
-            clicked ? (<CiLight className='size-6 transition rounded-full duration-300 ease-in-out transform p-[2px] hover:scale-110 hover:shadow-md' />) : (<CiDark className='size-6 transition duration-300 rounded-full p-[2px] ease-in-out transform hover:scale-110 hover:shadow-md' />)
-          }
-        </button>
-      </div> */}
-
     </div >
   )
 }

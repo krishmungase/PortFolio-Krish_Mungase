@@ -7,7 +7,7 @@ import Project from "./pages/Project";
 import Contact from './pages/Contact'
 
 const RootLayout = () => {
-    return <div className="min-h-screen overflow-hidden container mx-auto w-[90%]">
+    return <div className="min-h-screen min-w-screen overflow-hidden container mx-auto w-[90%]">
         <Header />
         <Outlet />
     </div>

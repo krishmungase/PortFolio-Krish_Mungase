@@ -3,7 +3,7 @@ import Mainsec from '../components/Mainsec'
 
 const Home = () => {
   return (
-    <div>
+    <div className=''>
       <Mainsec />
     </div>
   )

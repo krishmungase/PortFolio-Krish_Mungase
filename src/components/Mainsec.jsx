@@ -18,7 +18,7 @@ const Mainsec = () => {
                 <p className='text-lg font-bold text-center sm:text-lg sm:font-bold sm:text-start my-4 md:font-extrabold md:text-5xl dark:text-[#FFEFEF]'>I build things for web</p>
             </div>
             <div className='flex items-center justify-center'>
-                <img src="/Kmungase.jpeg" className='aspect-square w-80 h-80 md:w-96 md:h-96 rounded-full ' alt="" />
+                <img src="/Krish.jpeg" className='aspect-square w-80 h-80 md:w-96 md:h-96 rounded-full ' alt="" />
             </div>
         </div>
     )

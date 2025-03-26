@@ -6,8 +6,8 @@ const About = () => {
 
     const DownloadHandler = () => {
         const link = document.createElement('a');
-        link.href = '/Krish_Resume.pdf';
-        link.download = 'Krish_Resume.pdf';
+        link.href = '/Resume_BL.pdf';
+        link.download = 'Resume_BL.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
